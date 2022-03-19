@@ -1,6 +1,7 @@
 <html>
     <head>
-    <link rel="stylesheet" type ="text/css" href="styling.css" >
+    <!-- <link rel="stylesheet" type ="text/css" href="styling.css" > -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 <meta content="utf-8" http-equiv="encoding">
@@ -9,7 +10,8 @@
 <style>
     :root{
     --bg-color: background-color: #7f5a83;
-  background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+  background-image: linear-gradient(315deg, #cc2b5e 0%, #0d324d 74%);
+  /* background-image: url(back.jpg); */
     --menu-color: #00000045;
     --lyrics-color: white;
     --font-family: "Montserrat",sans-serif;
@@ -36,7 +38,7 @@
   }
   #top-bar > *{ display:inline-block; }
   #top-bar button{ margin:0;background: inherit; border: none; color: white; font-size: 100%;vertical-align:middle;transform:translateY(-40%);padding: 5px 10px;}
-  #about-song{ width: 60%; margin: 0 5%; line-height: 1vh; font-size:70%;}
+  #about-song{ width: 60%; margin: 0 5%;line-height: 1vh; font-size:70%;}
   .artist-name{ color: #ffffff79;}
   @media only screen and (max-width: 340px){
     #top-bar > button{ font-size: 15px; }
@@ -255,13 +257,15 @@
 </style>
 </head>
 <body>
-<div class="floating-icon"><a href="https://jewel998.github.io/playlist" style="color:white"><i class="fa fa-github"></i></a></div>
-<div class="floating-icon"><a href="https://codepen.io/jewel998" style="color:white"><i class="fa fa-codepen"></i></a></div>
+<!-- <div class="floating-icon"><a href="https://jewel998.github.io/playlist" style="color:white"><i class="fa fa-github"></i></a></div>
+<div class="floating-icon"><a href="https://codepen.io/jewel998" style="color:white"><i class="fa fa-codepen"></i></a></div> -->
 <div id="music-player">
         <img id="album-art"/>
+        <br>
+        <h2 id="top-bar" style="text-align: center;">Happy Birthday Teja &#128151</h2>
         <div id="top-bar">
-          <button id="back"><i class="fa fa-arrow-left"></i></button>
-          <div id="about-song"><h2 class="song-name"></h2><h4 class="artist-name"></h4></div>
+          <!-- <button id="back"><i class="fa fa-arrow-left"></i></button> -->
+          <!-- <div id="about-song"><h2 class="song-name"></h2><h4 class="artist-name"></h4></div> -->
         </div>
         <div id="lyrics">
           <h2 class="song-name"></h2><h4 class="artist-name"></h4>
@@ -352,18 +356,18 @@ $.getJSON('https://srija5441.github.io/all.json',function(data){
     function setSongName(songName){
         var context = $('.song-name');
         for(var i=0;i<context.length;i++){
-            context[i].innerHTML = songName;
+            context[i].innerHTML = "My first love called me Waste Fellow !";
         }
     }
     function setArtistName(artistName){
         var context = $('.artist-name');
         for(var i=0;i<context.length;i++){
-            context[i].innerHTML = artistName;
+            context[i].innerHTML = " And I love it !";
         }
     }
     function setAlbumArt(albumart){
         var context = $('#album-art');
-        context.attr("src",albumart);
+        context.attr("src","/home/rsv/Pictures/done.png");
     }
     function processTime(a){
         var b = parseInt(a/60000);
